@@ -1,0 +1,110 @@
+form{
+    margin-bottom: 150px;
+}
+table{
+    margin-bottom: 150px;
+}
+footer {
+    position: fixed;
+    bottom:5px;
+    width:81%;
+    border-radius: 10px;
+}
+ul ul a {
+    color: white;
+    font-size: 15px;
+    padding-left: 30px;
+    background: rgb(1, 112, 112);
+}
+.dropdown-toggle::after {
+    display: block;
+	position: absolute;
+    transform: translateY(-50%);
+	top: 50%;
+	color: black;
+    right: 20px;
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+.navbar {
+    padding: 15px 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+	margin-bottom: 40px;
+}
+
+
+/* sidebar */
+
+.wrapper {
+    width:100%;
+    align-items:stretch;
+	display:flex;
+}
+
+#sidebar {
+	background: teal;
+	color:white;
+	min-width:250px;
+    max-width:250px;
+	transition: all 0.5s;
+}
+#sidebar.active {
+    margin-left:-250px;
+}
+#sidebar .sidebar-header {
+    padding: 20px;
+	font-weight: bold;
+	color: while;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+	transition: all 0.3s;
+    display: block;
+    padding: 15px;
+    font-size:medium;
+}
+
+#sidebar ul li a:hover {
+    color: green;
+    background: white;
+}
+
+#sidebar ul li.active>a,a[aria-expanded="true"] {
+    color: white;
+    background: rgb(1, 112, 112);
+	font-weight: bold;
+}
+#sidebar ul li .dropdown-toggle::after {
+    display: block;
+	position: absolute;
+    transform: translateY(-50%);
+	top: 50%;
+	color: white;
+    right: 20px;
+}
+
+/* ---------------------------------------------------
+    nội dung
+----------------------------------------------------- */
+
+#content {
+	min-height:100vh;
+    width:100%;
+    padding:20px;
+}
+/* ẩn sidebar */
+@media (max-width: 800px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
